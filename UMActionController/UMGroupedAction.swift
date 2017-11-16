@@ -57,7 +57,7 @@ open class UMGroupedAction<T> : UMAction<T> where T : UIView {
         var currentLeft: UIView?
 
         self.actions.forEach { action in
-            action.view.setContentHuggingPriority(UILayoutPriorityDefaultLow, for: .horizontal)
+            action.view.setContentHuggingPriority(UILayoutPriority.defaultLow, for: .horizontal)
             view.addSubview(action.view)
 
             if currentLeft == nil {

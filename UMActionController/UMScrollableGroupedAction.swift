@@ -37,8 +37,8 @@ open class UMScrollableGroupedAction<T> : UMGroupedAction<T> where T : UIView {
             scrollView.addSubview(action.view)
 
             let viewHeight = action.view.systemLayoutSizeFitting(CGSize(width: self.actionWidth, height: 999999),
-                                                                 withHorizontalFittingPriority: UILayoutPriorityRequired,
-                                                                 verticalFittingPriority: UILayoutPriorityFittingSizeLevel).height
+                                                                 withHorizontalFittingPriority: UILayoutPriority.required,
+                                                                 verticalFittingPriority: UILayoutPriority.fittingSizeLevel).height
             maxHeight = max(maxHeight, Int(viewHeight))
 
             if currentLeft == nil {

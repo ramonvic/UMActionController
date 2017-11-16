@@ -152,7 +152,7 @@ open class UMAction<T> : NSObject where T : UIView {
         return actionButton;
     }
 
-    open func actionTapped(_ sender: Any?) {
+    @objc open func actionTapped(_ sender: Any?) {
         if let handler = self.handler {
             handler(self.controller)
         }
